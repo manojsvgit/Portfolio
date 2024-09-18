@@ -75,5 +75,3 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-Feel free to customize this README to better fit the specific details and features of your portfolio. If you need further adjustments or additional sections, just let me know!
