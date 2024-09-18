@@ -345,14 +345,14 @@ div[role="progressbar"] {
 	border-radius: 15px;
 	width: 94%;
 	float: left;
-	transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+	transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Added color transition */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
 }
 
 .service-list:hover {
 	background: #333333; /* Slightly lighter background on hover */
-	transform: translateY(-5px); /* Lift effect when hovered */
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+	transform: translateY(-10px) scale(1.03); /* Lift and slightly zoom effect on hover */
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
 }
 
 .service-list i {
@@ -366,19 +366,20 @@ div[role="progressbar"] {
 
 .service-list i:hover {
 	color: #ffd700; /* Brighter yellow on hover for the icon */
-	transform: scale(1.1); /* Slightly enlarge the icon on hover */
+	transform: scale(1.2); /* Slightly enlarge the icon on hover */
 }
 
 .service-list h3 {
 	font-size: 1.75rem; /* Adjusted font size */
 	margin-top: 8px;
 	margin-bottom: 15px;
-	color: white; /* Consistent with dark theme */
-	transition: color 0.3s ease; /* Smooth color change on hover */
+	color: #ffffff; /* Consistent with dark theme */
+	transition: color 0.3s ease, text-shadow 0.3s ease; /* Added text-shadow transition */
 }
 
 .service-list h3:hover {
 	color: #ffbf35; /* Highlight color on hover */
+	text-shadow: 1px 1px 5px rgba(255, 191, 53, 0.5); /* Glow effect on hover */
 }
 
 .service-list p {
@@ -386,6 +387,7 @@ div[role="progressbar"] {
 	line-height: 1.5; /* Improved line-height for readability */
 	color: #cccccc; /* Lighter text color for readability */
 }
+
 
 /***** TESTIMONIAL SECTION *****/
 .testimonial {
