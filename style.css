@@ -77,7 +77,7 @@ nav a:hover {
 nav a:active {
 	color: #e64a19; /* Darker shade when the link is clicked */
 }
-  
+
 /***** MAIN BANNER *****/
 .width-50 {
 	float: left;
@@ -114,67 +114,66 @@ nav a:active {
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	font-size: 1.125rem; /* Adjusted font size */
+	font-size: 1.5rem; /* Adjust icon size */
 	margin-top: 20px;
 	border-radius: 50%;
 	text-align: center;
-	border: 2px solid #ffbf35;
-	color: #ffbf35;
+	border: 2px solid #ffbf35; /* Border color */
+	color: #ffbf35; /* Icon color */
 	margin-left: 10px;
-	height: 50px;
-	width: 50px;
-	line-height: 50px;
+	height: 50px; /* Ensure consistent height */
+	width: 50px; /* Ensure consistent width */
+	line-height: 50px; /* Center icon vertically */
 	transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
 .banner-section a:hover {
-	background-color: #ffbf35; /* Yellow background on hover */
-	color: #1e1e1e; /* Dark text color for contrast */
+	background-color: #ffbf35; /* Background color on hover */
+	color: #1e1e1e; /* Icon color on hover */
 }
 
-  /*****Main BANNER IMAGE*****/
-.main-panel img {
-	margin-top: 10%;
-	width: 100%;
-	margin-left: 10%;
+/***** RESUME BUTTON *****/
+/* Style for the resume button */
+.resume-button {
+    display: inline-block;
+    font-size: 1rem; /* Font size for the button */
+    color: #ffffff; /* Text color */
+    background-color: #007bff; /* Distinct background color for the resume button */
+    padding: 12px 24px; /* Padding inside the button */
+    border-radius: 8px; /* More rounded corners for a softer look */
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow for a more pronounced 3D effect */
+    border: 2px solid transparent; /* Ensure no border style conflicts */
+    font-weight: bold; /* Bold text for emphasis */
+    cursor: pointer; /* Pointer cursor for button */
+    text-transform: uppercase; /* Uppercase text for a stronger impact */
+    letter-spacing: 1px; /* Slight spacing between letters */
+    outline: none; /* Remove default focus outline */
 }
 
-/*****Main BANNER*****/
-.width-50 {
-	float: left;
-	width: 50%;
+/* Hover effect */
+.resume-button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+    color: #ffffff; /* Text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
 }
-.banner-section {
-	width: 100%;
-	float: left;
-	margin-top: 25vh;
+
+/* Active state effect */
+.resume-button:active {
+    background-color: #004494; /* Even darker background color when button is pressed */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Reduce shadow for a pressed effect */
+    transform: scale(0.98); /* Slightly shrink the button on click */
 }
-.banner-section h1 {
-	font-size: 48px;
-	margin-top: 10px;
-	font-weight: bolder;
+
+/* Focus state effect (for accessibility) */
+.resume-button:focus {
+    outline: 2px solid #ffbf35; /* Outline to indicate focus */
+    outline-offset: 4px; /* Offset the outline for better visibility */
 }
-.banner-section h2 {
-	font-size: 20px;
-	line-height: 25px;
-	margin-top: 10px;
-	font-weight: 400;
-}
-.banner-section a {
-	float: left;
-	text-decoration: none;
-	font-size: 18px;
-	margin-top: 20px;
-	border-radius: 50%;
-	text-align: center;
-	border: 2px solid #ffbf35;
-	color: #ffbf35;
-	margin-left: 10px;
-	height: 50px;
-	width: 50px;
-	line-height: 50px;
-}
-/*****Main BANNER IMAGE*****/
+
+/***** MAIN BANNER IMAGE *****/
 .main-panel img {
 	margin-top: 10%;
 	width: 100%;
@@ -659,4 +658,8 @@ div[role="progressbar"] {
         margin-top: 10vh; /* Adjust spacing for mobile view */
         text-align: center; /* Center-align text on mobile */
     }
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
 }
