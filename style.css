@@ -631,3 +631,30 @@ div[role="progressbar"] {
 	color: #ffbf35; /* Change the icon color on hover */
 	box-shadow: 0px 4px 10px rgba(255, 191, 53, 0.5); /* Add shadow for a glowing effect */
 }
+
+/* Mobile styles (for screens up to 600px wide) */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Smaller logo for mobile */
+    }
+
+    .nav {
+        display: block; /* Stack navigation vertically on mobile */
+        text-align: center;
+    }
+
+    .nav a {
+        display: block;
+        margin: 10px 0; /* Vertical spacing for mobile menu */
+    }
+
+    .banner-section {
+        margin-top: 10vh; /* Adjust spacing for mobile view */
+        text-align: center; /* Center-align text on mobile */
+    }
+}
