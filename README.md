@@ -1,6 +1,10 @@
 # Portfolio Website
 
 Welcome to my personal portfolio website! This is where I showcase my projects, skills, and professional experiences. It’s designed to give a comprehensive overview of my work and capabilities.
+## Live Demo
+
+You can view the live demo of the website here: [Portfolio Website](https://manojsvgit.github.io/Portfolio/)
+
 
 ## Table of Contents
 
