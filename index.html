@@ -1,534 +1,205 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Student Portfolio Website Template</title>
-    <!-----META SECTION----->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    
-    <!------ MENU SECTION ------>
-    <div class="main-panel">
-      <div class="container">
-        <div class="width-33 logo">
-          Port <span class="span-col">folio</span>
-        </div>
-        <div class="width-66">
-          <nav>
-            <a href="#home"><span class="span-col">Home</span></a>
-            <a href="#about">About me</a>
-            <a href="#education">Education</a>
-            <a href="#services">My Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#testimonial">Testimonial</a>
-          </nav>
-        </div>
-      </div>
-    </div>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <section id="Home">
-    <!------ MAIN BANNER ------>
-    <div class="container">
-      <div class="width-50">
-        <div class="banner-section">
-          <span class="span-col">Welcome To manojsvgit.com</span>
-          <h1>Manoj <span class="span-col">S.V</span></h1>
-          <h2>- I'm a passionate Software Engineer from Bangalore.</h2>
-          <div class="social-buttons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="https://x.com/manojsvgit?t=I72uEu5ixz3OFEsilW1z2A&s=08"
-              ><i class="fa fa-twitter"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/manoj-s-v-720225256/"
-              ><i class="fa fa-linkedin"></i
-            ></a>
-            <a href="https://www.instagram.com/manoj_poojary__/"
-              ><i class="fa fa-instagram"></i
-            ></a>
-            <a href="https://github.com/manojsvgit"
-              ><i class="fa fa-github"></i
-            ></a>
-          </div>
-          <button class="resume-button" id="resumeButton">
-            Download Resume
-          </button>
-        </div>
-      </div>
-      <div class="width-50">
-        <img src="images/boyimage.png" alt="Profile Image" />
-      </div>
-    </div>
-  </section>
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!------ABOUT US SECTION------>
-    <section id="about">
-      <div class="main-section bg-lightgrey">
-        <div class="container">
-          <div class="width-50">
-            <img src="images/boyimage.png" class="about-img" />
-          </div>
-          <div class="width-50">
-            <div class="about-us">
-              <h2 class="heading-text">About Me</h2>
-              <h3>I am available for UI UX Design Project</h3>
-              <p>
-                Hi, I am Manoj S V, From Banglore.I'm a Python programmer with a
-                passion for building efficient and elegant software solutions.
-                My coding journey has equipped me with the skills to tackle
-                diverse programming challenges and create practical
-                applications.
-              </p>
-              <div class="width-50 mt-20">
-                <table cellspacing="8" cellpadding="8">
-                  <tr>
-                    <th>Name:</th>
-                    <td>Manoj S V</td>
-                  </tr>
-                  <tr>
-                    <th>Email:</th>
-                    <td>manojsvgit@gmail.com</td>
-                  </tr>
-                  <tr>
-                    <th>Birthday:</th>
-                    <td>11 May, 2003</td>
-                  </tr>
-                  <tr>
-                    <th>Study:</th>
-                    <td>CMR University</td>
-                  </tr>
-                </table>
-              </div>
-              <div class="width-50 mt-20">
-                <table cellspacing="8" cellpadding="8">
-                  <tr>
-                    <th>Phone:</th>
-                    <td>92422 42393</td>
-                  </tr>
-                  <tr>
-                    <th>City:</th>
-                    <td>BANGLORE</td>
-                  </tr>
-                  <tr>
-                    <th>Freelancer:</th>
-                    <td>Available</td>
-                  </tr>
-                  <tr>
-                    <th>Website:</th>
-                    <td>www.manojsvgit.com</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-      <!-- SKILL SECTION -->
-      <div class="main-section">
-        <div class="container">
-          <h2 class="heading-text">My Skills</h2>
-          <div class="width-50">
-            <div class="skill">
-              <b>HTML</b>
-              <span>95%</span>
-              <div>
-                <span style="width: 95%"></span>
-              </div>
-            </div>
-            <div class="skill">
-              <b>CSS</b>
-              <span>91%</span>
-              <div>
-                <span style="width: 91%"></span>
-              </div>
-            </div>
-            <div class="skill">
-              <b>JavaScript</b>
-              <span>85%</span>
-              <div>
-                <span style="width: 85%"></span>
-              </div>
-            </div>
-            <div class="skill">
-              <b>React js</b>
-              <span>79%</span>
-              <div>
-                <span style="width: 79%"></span>
-              </div>
-            </div>
-          </div>
-          <div class="width-50">
-            <div class="width-50">
-              <div
-                role="progressbar"
-                aria-valuenow="65"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="--value: 65"
-              >
-                React-65
-              </div>
-            </div>
-            <div class="width-50">
-              <div
-                role="progressbar"
-                aria-valuenow="85"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="--value: 85"
-              >
-                Jquery-85
-              </div>
-            </div>
-            <div class="width-50">
-              <div
-                role="progressbar"
-                aria-valuenow="65"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="--value: 65"
-              >
-                Node-65
-              </div>
-            </div>
-            <div class="width-50">
-              <div
-                role="progressbar"
-                aria-valuenow="85"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="--value: 85"
-              >
-                CMD-85
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <title>Portfolio website complete</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Marlon</a>
+                </div>
 
-    <!-- EDUCATION AND EXPERIENCE SECTION -->
-    <section id="education">
-      <div class="main-section bg-lightgrey">
-        <div class="container">
-          <div class="edu-exp">
-            <h2 class="heading-text">Education</h2>
-            <div class="experience-list">
-              <div class="experience-content">
-                <h2>Harvard University</h2>
-                <h3>2005-2008</h3>
-                <p>Master in Computer Engineering</p>
-              </div>
-            </div>
-            <div class="experience-list">
-              <div class="experience-content">
-                <h2>Stanford University</h2>
-                <h3>2005-2008</h3>
-                <p>Doctor in Computer Engineering</p>
-              </div>
-            </div>
-            <div class="experience-list">
-              <div class="experience-content">
-                <h2>University of Oxford</h2>
-                <h3>2005-2008</h3>
-                <p>Bachelor in Computer Engineering</p>
-              </div>
-            </div>
-            <div class="experience-list">
-              <div class="experience-content">
-                <h2>University of Cambridge</h2>
-                <h3>2005-2008</h3>
-                <p>Polytechnic in Computer Engineering</p>
-              </div>
-            </div>
-          </div>
-          <div class="edu-exp">
-            <h2 class="heading-text">Experience</h2>
-            <div class="experience-list">
-              <div class="experience-content">
-                <h2>Apple Inc Company</h2>
-                <h3>2023-current</h3>
-                <p>Front-End Developer</p>
-              </div>
-            </div>
-            <div class="experience-list">
-              <div class="experience-content">
-                <h2>Google Inc Company</h2>
-                <h3>2021-2023</h3>
-                <p>Graphic design student portfolio websites template.</p>
-              </div>
-            </div>
-            <div class="experience-list">
-              <div class="experience-content">
-                <h2>Amazon E-commerce Company</h2>
-                <h3>2019-2021</h3>
-                <p>Front-End Developer</p>
-              </div>
-            </div>
-            <div class="experience-list">
-              <div class="experience-content">
-                <h2>Microsoft Adobe Company</h2>
-                <h3>2017-2019</h3>
-                <p>UI / UX Designer</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
 
-    <!-- SERVICES SECTION -->
-    <section id="services">
-      <div class="main-section">
-        <div class="container">
-          <h2 class="heading-text">Our Services</h2>
-          <div class="width-50">
-            <div class="service-list">
-              <i class="fa fa-chrome"></i>
-              <h3>Web Development & Design</h3>
-              <br />
-              <p>
-                Our web development team builds responsive, user-friendly
-                websites that enhance your online presence. We handle everything
-                from front-end and back-end development to UI/UX design and
-                optimization Techniques.
-              </p>
-            </div>
-          </div>
-          <div class="width-50">
-            <div class="service-list">
-              <i class="fa fa-instagram"></i>
-              <h3>Digital Marketing</h3>
-              <br />
-              <p>
-                Boost your brand’s visibility with our comprehensive digital
-                marketing services. We offer SEO, social media marketing,
-                content creation, and paid advertising strategies to help you
-                reach and engage your target audience.
-              </p>
-            </div>
-          </div>
-          <div class="width-50">
-            <div class="service-list">
-              <i class="fa fa-reddit"></i>
-              <h3>Cybersecurity Services</h3>
-              <br />
-              <p>
-                Protect your business with our robust cybersecurity solutions.
-                We offer risk assessments, threat detection, and security
-                management to safeguard your digital assets and ensure
-                compliance and the safety of every citizen.
-              </p>
-            </div>
-          </div>
-          <div class="width-50">
-            <div class="service-list">
-              <i class="fa fa-video-camera"></i>
-              <h3>Video Editing</h3>
-              <br />
-              <p>
-                Enhance your visual content with our professional video editing
-                services. We offer everything from basic cuts and transitions to
-                advanced effects and color correction, ensuring your videos are
-                polished and engaging.
-              </p>
-            </div>
-          </div>
-          <div class="width-50">
-            <div class="service-list">
-              <i class="fa fa-camera"></i>
-              <h3>Photography</h3>
-              <br />
-              <p>
-                Capture stunning visuals with our expert photography services.
-                Whether it’s product photography, corporate events, or personal
-                portraits, we deliver high-quality images that effectively
-                convey your brand’s message and enhance your marketing efforts.
-              </p>
-            </div>
-          </div>
-          <div class="width-50">
-            <div class="service-list">
-              <i class="fa fa-apple"></i>
-              <h3>Mobile App Development</h3>
-              <br />
-              <p>
-                We create intuitive and engaging mobile applications for both
-                iOS and Android platforms. Our apps are designed to deliver an
-                exceptional user experience and meet your business goals. We
-                handle the full development cycle, from initial design to final
-                deployment..
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
 
-    <!-- TESTIMONIAL SECTION -->
-    <section id="testimonial">
-      <div class="main-section bg-lightgrey">
-        <div class="container">
-          <h2 class="heading-text">What our Clients Say</h2>
-          <div class="testimonial">
-            <div class="testimonial-content">
-              <div class="testimonial-img">
-                <img src="images/client1.jpg" alt="Client's Photo" />
-              </div>
-              <i class="fa fa-quote-left"></i>
-              <p>
-                "From start to finish, the experience with Perplexity AI was
-                seamless. Their expertise and commitment to excellence have made
-                a significant impact on our business. They took the time to
-                understand our needs"
-              </p>
-              <div class="testimonial-name">
-                <h5>Aarav Patel</h5>
-                <p>Marketing Head at Tech Innovators Pvt. Ltd.</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial">
-            <div class="testimonial-content">
-              <div class="testimonial-img">
-                <img src="images/client1.jpg" alt="Client's Photo" />
-              </div>
-              <i class="fa fa-quote-left"></i>
-              <p>
-                "Working with Perplexity AI was a game-changer for our business.
-                Their expertise and dedication to delivering exceptional results
-                were evident from the start. We couldn't be happier with the
-                outcome!"
-              </p>
-              <div class="testimonial-name">
-                <h5>Priya Sharma</h5>
-                <p>Chief Software Engineer at NexGen Solutions</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial">
-            <div class="testimonial-content">
-              <div class="testimonial-img">
-                <img
-                  src="images/client1.jpg
-          "
-                  alt="Client's Photo"
-                />
-              </div>
-              <i class="fa fa-quote-left"></i>
-              <p>
-                "The team at Perplexity AI provided us with top-notch service
-                and support throughout the entire project. Their innovative
-                solutions and attention to detail exceeded our expectations."
-              </p>
-              <div class="testimonial-name">
-                <h5>Ravi Kumar</h5>
-                <p>Director of Operations at Future Growth Enterprises</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Manoj</span><br> Web Designer</h1>
 
-    <!-- PORTFOLIO SECTION -->
-    <section id="portfolio">
-      <div class="main-section">
-        <div class="container">
-          <h2 class="heading-text">My Portfolio</h2>
-          <div class="gallery">
-            <div class="width-33">
-              <img src="images/port1.jpg" alt="Portfolio Item 1" />
-            </div>
-            <div class="width-33">
-              <img src="images/port1.jpg" alt="Portfolio Item 2" />
-            </div>
-            <div class="width-33">
-              <img src="images/port1.jpg" alt="Portfolio Item 3" />
-            </div>
-            <div class="width-33">
-              <img src="images/port1.jpg" alt="Portfolio Item 4" />
-            </div>
-            <div class="width-33">
-              <img src="images/port1.jpg" alt="Portfolio Item 5" />
-            </div>
-            <div class="width-33">
-              <img src="images/port1.jpg" alt="Portfolio Item 6" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                    <a href="#" class="button">Contact</a>
+                </div>
 
-    <!-- CONTACT US SECTION -->
-    <div class="main-section contact bg-lightgrey">
-      <div class="container">
-        <h2 class="heading-text">Get In Touch</h2>
-        <div class="width-100">
-          <form>
-            <input type="text" placeholder="Full Name..." />
-            <input type="text" placeholder="Full Email Id..." />
-            <input type="text" placeholder="Full Mobile No..." />
-            <textarea placeholder="Enter Address..."></textarea>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-        <div class="width-33">
-          <h3><i class="fa fa-map-marker"></i></h3>
-          <h4>Address</h4>
-          <p>
-            CMR Institute of Technology 132 AECS Layout ITPL Main Road,
-            Kundalahalli Bangalore 560037, India
-          </p>
-        </div>
-        <div class="width-33">
-          <h3><i class="fa fa-phone"></i></h3>
-          <h4>Phone</h4>
-          <p>+91 92422 42393</p>
-        </div>
-        <div class="width-33">
-          <h3><i class="fa fa-envelope-o"></i></h3>
-          <h4>Email</h4>
-          <p>
-            <a
-              href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDfrpppLrXKsVjXmlVMkKQhqRSzlfhCVcXHBWNxbvLBhJjrRpblRDFqWdwZnHjphkfHTDs"
-              >manojsvgit@gmail.com</a
-            >
-          </p>
-        </div>
-      </div>
-    </div>
+                <div class="home__social">
+                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
 
-    <!-- FOOTER SECTION -->
-    <div class="footer">
-      <div class="container">
-        <div class="footer-sect social-icon width-50">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="https://x.com/manojsvgit?t=I72uEu5ixz3OFEsilW1z2A&s=08"
-            ><i class="fa fa-twitter"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/manoj-s-v-720225256/"
-            ><i class="fa fa-linkedin"></i
-          ></a>
-          <a href="https://www.instagram.com/manoj_poojary__/"
-            ><i class="fa fa-instagram"></i
-          ></a>
-          <a href="https://github.com/manojsvgit"
-            ><i class="fa fa-github"></i
-          ></a>
-        </div>
-        <div class="footer-sect mt-20 width-50">
-          Copyright © 2023 manojsvgit.com . All Rights Reserved
-        </div>
-      </div>
-    </div>
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
 
-    <script src="script.js"></script>
-  </body>
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Marlon</h2>
+                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Profesional Skills</h2>
+                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon'></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">95%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-css3 skills__icon'></i>
+                                <span class="skills__name">CSS3</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <span class="skills__name">JAVASCRIPT</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">65%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxs-paint skills__icon'></i>
+                                <span class="skills__name">UX/UI</span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Work</h2>
+
+                <div class="work__container bd-grid">
+                    <a href="" class="work__img">
+                        <img src="assets/img/work1.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work2.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work3.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work4.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work5.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work6.jpg" alt="">
+                    </a>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="button" value="Enviar" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Marlon</p>
+            <div class="footer__social">
+                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            </div>
+            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
