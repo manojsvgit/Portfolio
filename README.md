@@ -50,7 +50,7 @@ To get a local copy of this project up and running, follow these simple steps:
 
 2. **Navigate to the project directory:**
     ```bash
-    cd portfolio-website
+    cd Portfolio
     ```
 
 3. **Open `index.html` in your web browser to view the website locally.**
