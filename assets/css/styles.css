@@ -13,6 +13,8 @@
   --second-color: hsl(var(--hue-color), 56%, 12%);
   --background-color: #ffffff; /* Light background */
   --text-color: #000000; /* Dark text */
+  --icon-bg-light: rgba(255, 255, 255, 0.2); /* Light theme background for social icon button */
+  --icon-bg-dark: rgba(0, 0, 0, 0.1); /* Dark theme background for social icon button*/
   
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
@@ -34,6 +36,8 @@
     --text-color: #E0E0E0; /* Light text */
     --first-color: hsl(var(--hue-color), 89%, 50%); /* Adjusted for dark mode */
     --second-color: hsl(var(--hue-color), 56%, 15%); /* Slightly lighter for better contrast */
+    --icon-bg-light: rgba(255, 255, 255, 0.1);
+    --icon-bg-dark: rgba(255, 255, 255, 0.3); /* Darker background for dark theme for social icon button */
   }
   
 }
@@ -143,17 +147,6 @@ img {
   background-color: var(--first-color); /* Adapt line color */
 }
 
-/*===== NAV =====*/
-.nav {
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: var(--font-semi);
-  background-color: var(--nav-background-color); /* Use variable for background */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
-}
-
 :root {
   --nav-background-color: #FFFFFF; /* Light Theme: White background */
   --nav-text-color: #007BFF; /* Light Theme: Soft Blue */
@@ -164,11 +157,14 @@ img {
   --nav-text-color: var(--text-color); /* Dark Theme: Adapt text color */
 }
 
-.nav__list {
-  display: flex; /* Align items in a row */
-  align-items: center; /* Center vertically */
+ /*===== NAV =====*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-semi);
 }
-
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -177,27 +173,20 @@ img {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--nav-background-color); /* Use variable for background */
+    background-color: var(--second-color);
     transition: 0.5s;
   }
 }
-
 .nav__item {
   margin-bottom: var(--mb-4);
 }
-
 .nav__link {
   position: relative;
-  padding: 10px; /* Add padding for better click area */
-  color: var(--nav-text-color); /* Adapt link color */
-  transition: color 0.3s; /* Smooth transition for color */
+  color: #fff;
 }
-
 .nav__link:hover {
   position: relative;
-  color: var(--first-color); /* Change link color on hover */
 }
-
 .nav__link:hover::after {
   position: absolute;
   content: "";
@@ -207,26 +196,16 @@ img {
   top: 2rem;
   background-color: var(--first-color);
 }
-
 .nav__logo {
-  color: var(--nav-text-color); /* Adapt logo color */
+  color: var(--second-color);
 }
-
 .nav__toggle {
-  background: none; /* No background for the button */
-  border: none; /* No border */
-  color: var(--nav-text-color); /* Adapt button color */
-  font-size: 1rem; /* Adjust size */
-  cursor: pointer; /* Pointer cursor */
-  margin-left: 15px; /* Space from other menu items */
-  transition: color 0.3s; /* Smooth color transition */
+  color: var(--second-color);
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.nav__toggle:hover {
-  color: var(--first-color); /* Change color on hover */
-}
-
-/* Active menu */
+/*Active menu*/
 .active-link::after {
   position: absolute;
   content: "";
@@ -241,6 +220,7 @@ img {
 .show {
   right: 0;
 }
+
 
 /* Dark Theme Adjustments */
 .dark-theme .nav {
@@ -259,38 +239,62 @@ img {
   row-gap: 5rem;
   padding: 4rem 0 5rem;
 }
+
 .home__data {
   align-self: center;
 }
+
 .home__title {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
 }
+
 .home__title-color {
   color: var(--first-color);
 }
+
+/* Adjust the layout for the social icons */
 .home__social {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Display icons in a row by default */
+  gap: 10px; /* Space between icons */
+  justify-content: center; /* Center the icons horizontally */
 }
+
+@media screen and (max-width: 480px) {
+  .home__social {
+    flex-direction: column; /* Display icons in a column on mobile screens */
+    gap: 15px; /* Adjust the spacing for better appearance */
+  }
+}
+
 .home__social-icon {
-  width: max-content;
-  margin-bottom: var(--mb-2);
-  font-size: 1.5rem;
-  color: var(--second-color);
+  width: 40px; /* Adjust icon size */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--second-color); /* Background color */
+  border-radius: 50%; /* Circular shape */
+  transition: transform 0.3s, background-color 0.3s;
 }
+
 .home__social-icon:hover {
-  color: var(--first-color);
+  background-color: var(--first-color); /* Change color on hover */
+  transform: scale(1.1); /* Slightly increase size on hover */
 }
+
 .home__img {
   position: absolute;
   right: 0;
   bottom: 0;
   width: 260px;
 }
+
 .home__blob {
   fill: var(--first-color);
 }
+
 .home__blob-img {
   width: 360px;
 }
