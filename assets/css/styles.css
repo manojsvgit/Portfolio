@@ -4,12 +4,16 @@
 :root {
   --header-height: 3rem;
   --font-semi: 600;
+
   /*===== Colores =====*/
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
+  --background-color: #ffffff; /* Light background */
+  --text-color: #000000; /* Dark text */
+  
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
@@ -24,7 +28,16 @@
   /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
+
+  .dark-theme {
+    --background-color: #121212; /* Dark background */
+    --text-color: #E0E0E0; /* Light text */
+    --first-color: hsl(var(--hue-color), 89%, 50%); /* Adjusted for dark mode */
+    --second-color: hsl(var(--hue-color), 56%, 15%); /* Slightly lighter for better contrast */
+  }
+  
 }
+
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3.5rem;
@@ -47,8 +60,10 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: var(--second-color);
+  background-color: var(--background-color); /* Set background color */
+  color: var(--text-color); /* Set text color */
 }
+
 
 h1, h2, p {
   margin: 0;
@@ -74,11 +89,12 @@ img {
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
-  color: var(--first-color);
+  color: var(--first-color); /* This will adapt to dark theme */
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
 }
+
 .section-title::after {
   position: absolute;
   content: "";
@@ -88,7 +104,7 @@ img {
   right: 0;
   margin: auto;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: var(--first-color); /* Adapt this to dark theme */
 }
 
 .section {
@@ -110,8 +126,21 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  background-color: var(--background-color); /* Adapt background color */
+  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15); /* Adjust shadow for dark mode */
+}
+
+.dark-theme .l-header {
+  background-color: var(--second-color); /* Adjust for dark theme */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); /* Darker shadow for better visibility */
+}
+
+.dark-theme .section-title {
+  color: var(--text-color); /* Ensure text color adapts */
+}
+
+.dark-theme .section-title::after {
+  background-color: var(--first-color); /* Adapt line color */
 }
 
 /*===== NAV =====*/
@@ -121,7 +150,25 @@ img {
   justify-content: space-between;
   align-items: center;
   font-weight: var(--font-semi);
+  background-color: var(--nav-background-color); /* Use variable for background */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
 }
+
+:root {
+  --nav-background-color: #FFFFFF; /* Light Theme: White background */
+  --nav-text-color: #007BFF; /* Light Theme: Soft Blue */
+}
+
+.dark-theme {
+  --nav-background-color: var(--second-color); /* Dark Theme: Existing background */
+  --nav-text-color: var(--text-color); /* Dark Theme: Adapt text color */
+}
+
+.nav__list {
+  display: flex; /* Align items in a row */
+  align-items: center; /* Center vertically */
+}
+
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -130,20 +177,27 @@ img {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--second-color);
+    background-color: var(--nav-background-color); /* Use variable for background */
     transition: 0.5s;
   }
 }
+
 .nav__item {
   margin-bottom: var(--mb-4);
 }
+
 .nav__link {
   position: relative;
-  color: #fff;
+  padding: 10px; /* Add padding for better click area */
+  color: var(--nav-text-color); /* Adapt link color */
+  transition: color 0.3s; /* Smooth transition for color */
 }
+
 .nav__link:hover {
   position: relative;
+  color: var(--first-color); /* Change link color on hover */
 }
+
 .nav__link:hover::after {
   position: absolute;
   content: "";
@@ -153,16 +207,26 @@ img {
   top: 2rem;
   background-color: var(--first-color);
 }
+
 .nav__logo {
-  color: var(--second-color);
-}
-.nav__toggle {
-  color: var(--second-color);
-  font-size: 1.5rem;
-  cursor: pointer;
+  color: var(--nav-text-color); /* Adapt logo color */
 }
 
-/*Active menu*/
+.nav__toggle {
+  background: none; /* No background for the button */
+  border: none; /* No border */
+  color: var(--nav-text-color); /* Adapt button color */
+  font-size: 1rem; /* Adjust size */
+  cursor: pointer; /* Pointer cursor */
+  margin-left: 15px; /* Space from other menu items */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav__toggle:hover {
+  color: var(--first-color); /* Change color on hover */
+}
+
+/* Active menu */
 .active-link::after {
   position: absolute;
   content: "";
@@ -176,6 +240,17 @@ img {
 /*=== Show menu ===*/
 .show {
   right: 0;
+}
+
+/* Dark Theme Adjustments */
+.dark-theme .nav {
+  background-color: var(--second-color); /* Adjust as needed for dark theme */
+}
+
+.dark-theme .nav__link,
+.dark-theme .nav__logo,
+.dark-theme .nav__toggle {
+  color: var(--text-color); /* Ensure all text adapts */
 }
 
 /*===== HOME =====*/
@@ -220,7 +295,7 @@ img {
   width: 360px;
 }
 
-/*BUTTONS*/
+/* BUTTONS */
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -228,11 +303,43 @@ img {
   padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
-  transition: 0.3s;
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  font-size: 1rem; /* Set font size */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative; /* Enable positioning for the effect */
+  overflow: hidden; /* Hide overflow for the ripple effect */
+  background-color: var(--first-color);
+  color: var(--text-color);
 }
+
+.button::before {
+  content: '';
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3); /* Light ripple effect */
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0); /* Start scale at 0 */
+  transition: transform 0.5s ease; /* Transition for the ripple */
+}
+
+.button:hover::before {
+  transform: translate(-50%, -50%) scale(1); /* Expand ripple on hover */
+}
+
 .button:hover {
-  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.25); /* Darker shadow */
+  transform: translateY(-3px); /* Lift effect */
+  background-color: var(--second-color); /* Change background color on hover */
 }
+
+.button:active {
+  transform: translateY(1px); /* Press effect */
+}
+
 
 /* ===== ABOUT =====*/
 .about__container {
