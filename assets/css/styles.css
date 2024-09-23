@@ -577,39 +577,21 @@ img {
   transition: color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
 
-/* Glowing effect on hover */
 .footer__icon:hover {
   color: var(--first-color); /* Change color on hover */
   transform: scale(1.1); /* Slightly enlarge the icon on hover */
   box-shadow: 0 0 10px var(--first-color), 0 0 20px var(--first-color); /* Glowing effect */
-}
+
   color: var(--first-color); /* Change color on hover */
   transform: scale(1.1); /* Slightly enlarge the icon on hover */
   box-shadow: 0 0 10px var(--first-color), 0 0 20px var(--first-color); /* Glowing effect */
 }
-
 
 .footer__copy {
   font-size: var(--smaller-font-size);
   opacity: 0.7; /* Slightly muted text for a softer look */
   margin-top: var(--mb-2); /* Add some space above the copyright text */
 }
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  .footer {
-    padding: 3rem 0; /* Increase padding for smaller screens */
-  }
-
-  .footer__title {
-    font-size: 1.5rem; /* Adjust title size for smaller screens */
-  }
-
-  .footer__copy {
-    font-size: calc(var(--smaller-font-size) * 0.9); /* Slightly smaller font size */
-  }
-}
-
 
 
 /* ===== MEDIA QUERIES=====*/
