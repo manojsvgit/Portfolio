@@ -1,53 +1,46 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
   --font-semi: 600;
 
-  /*===== Colores =====*/
-  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
-  /* HSL color mode */
-  --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 89%, 60%);
-  --second-color: hsl(var(--hue-color), 56%, 12%);
-  --background-color: #ffffff; /* Light background */
-  --text-color: #000000; /* Dark text */
-  --icon-bg-light: rgba(255, 255, 255, 0.2); /* Light theme background for social icon button */
-  --icon-bg-dark: rgba(0, 0, 0, 0.1); /* Dark theme background for social icon button*/
-  
-  /*===== Fuente y tipografia =====*/
-  --body-font: "Poppins", sans-serif;
-  --big-font-size: 2rem;
-  --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
-  --smaller-font-size: .75rem;
-  /*===== Margenes =====*/
+/*===== Colors =====*/
+  --first-color: #6200EE; /* Purple */
+  --second-color: #121212; /* Charcoal */
+  --accent-color: #03DAC5; /* Vibrant Teal */
+
+  /* Text Color */
+  --text-color: hsl(0, 0%, 95%); /* Light text for dark background */
+  --muted-text-color: hsl(0, 0%, 70%); /* Muted text color for less emphasis */
+
+  /*===== Font and Typography =====*/
+  --body-font: "Montserrat", sans-serif; /* Modern sans-serif font */
+  --heading-font: "Oswald", sans-serif; /* Impactful heading font */
+  --big-font-size: 2.5rem; /* Increased size for headings */
+  --h2-font-size: 1.75rem; /* Larger subheadings */
+  --normal-font-size: 1rem;
+  --smaller-font-size: 0.875rem;
+
+  /*===== Margins =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
-  /*===== z index =====*/
+
+  /*===== z-index =====*/
   --z-back: -10;
   --z-fixed: 100;
-
-  .dark-theme {
-    --background-color: #121212; /* Dark background */
-    --text-color: #E0E0E0; /* Light text */
-    --first-color: hsl(var(--hue-color), 89%, 50%); /* Adjusted for dark mode */
-    --second-color: hsl(var(--hue-color), 56%, 15%); /* Slightly lighter for better contrast */
-    --icon-bg-light: rgba(255, 255, 255, 0.1);
-    --icon-bg-dark: rgba(255, 255, 255, 0.3); /* Darker background for dark theme for social icon button */
-  }
-  
 }
+
 
 @media screen and (min-width: 968px) {
   :root {
-    --big-font-size: 3.5rem;
+    --big-font-size: 3.5rem; /* Responsive font sizes */
     --h2-font-size: 2rem;
-    --normal-font-size: 1rem;
-    --smaller-font-size: .875rem;
+    --normal-font-size: 1.125rem; /* Slightly larger for readability */
+    --smaller-font-size: 0.875rem;
   }
 }
 
@@ -64,10 +57,9 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--background-color); /* Set background color */
-  color: var(--text-color); /* Set text color */
+  background-color: #121212; /* Dark background */
+  color: #E0E0E0; /* Light text color */
 }
-
 
 h1, h2, p {
   margin: 0;
@@ -89,14 +81,49 @@ img {
   display: block;
 }
 
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+  /* Colors */
+  --primary-color: #6200EE; /* Main color */
+  --secondary-color: #3700B3; /* Darker shade */
+  --background-color: #121212; /* Dark background */
+  --text-color: #E0E0E0; /* Light text color */
+  /* Typography */
+  --body-font: "Poppins", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+  /* Margins */
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /* z-index */
+  --z-back: -10;
+  --z-fixed: 100;
+}
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .875rem;
+  }
+}
+
+
 /*===== CLASS CSS ===== */
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
-  color: var(--first-color); /* This will adapt to dark theme */
+  color: var(--first-color); /* Use primary color */
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
+  font-weight: var(--font-semi); /* Add font weight for emphasis */
 }
 
 .section-title::after {
@@ -108,20 +135,25 @@ img {
   right: 0;
   margin: auto;
   top: 2rem;
-  background-color: var(--first-color); /* Adapt this to dark theme */
+  background-color: var(--first-color); /* Use primary color */
 }
 
 .section {
   padding-top: 3rem;
   padding-bottom: 2rem;
+  background-color: var(--second-color); /* Add a background color for sections */
+  border-radius: 0.5rem; /* Slight rounding for a modern look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/*===== LAYOUT =====*/
+/*===== LAYOUT ===== */
 .bd-grid {
   max-width: 1024px;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
+  gap: var(--mb-4); /* Space between grid items */
 }
 
 .l-header {
@@ -130,41 +162,29 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--background-color); /* Adapt background color */
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15); /* Adjust shadow for dark mode */
+  background-color: var(--background-color); /* Use background color */
+  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15); /* Subtle shadow */
+  transition: background-color 0.3s; /* Smooth transition for background */
 }
 
+/* Dark Theme Adjustments */
 .dark-theme .l-header {
   background-color: var(--second-color); /* Adjust for dark theme */
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); /* Darker shadow for better visibility */
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1); /* Light shadow for contrast */
 }
 
-.dark-theme .section-title {
-  color: var(--text-color); /* Ensure text color adapts */
-}
-
-.dark-theme .section-title::after {
-  background-color: var(--first-color); /* Adapt line color */
-}
-
-:root {
-  --nav-background-color: #FFFFFF; /* Light Theme: White background */
-  --nav-text-color: #007BFF; /* Light Theme: Soft Blue */
-}
-
-.dark-theme {
-  --nav-background-color: var(--second-color); /* Dark Theme: Existing background */
-  --nav-text-color: var(--text-color); /* Dark Theme: Adapt text color */
-}
-
- /*===== NAV =====*/
+/*===== NAV =====*/
 .nav {
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: var(--font-semi);
+  background-color: var(--background-color); /* Base background color */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  padding: 0 1rem; /* Add padding for better spacing */
 }
+
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -173,20 +193,26 @@ img {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--second-color);
+    background-color: var(--secondary-color); /* Use secondary color for mobile menu */
     transition: 0.5s;
   }
 }
+
 .nav__item {
   margin-bottom: var(--mb-4);
 }
+
 .nav__link {
   position: relative;
-  color: #fff;
+  color: var(--primary-color); /* Use primary color for links */
+  transition: color 0.3s; /* Smooth color transition */
+  padding: 0.5rem; /* Add padding for clickable area */
 }
+
 .nav__link:hover {
-  position: relative;
+  color: var(--secondary-color); /* Darker shade on hover */
 }
+
 .nav__link:hover::after {
   position: absolute;
   content: "";
@@ -194,18 +220,21 @@ img {
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: var(--primary-color); /* Use primary color for hover effect */
 }
+
 .nav__logo {
-  color: var(--second-color);
+  color: var(--primary-color); /* Use primary color for logo */
+  font-size: 1.5rem; /* Increase logo font size for emphasis */
 }
+
 .nav__toggle {
-  color: var(--second-color);
+  color: var(--primary-color); /* Use primary color for toggle */
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-/*Active menu*/
+/* Active menu */
 .active-link::after {
   position: absolute;
   content: "";
@@ -213,24 +242,12 @@ img {
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: var(--primary-color); /* Use primary color for active link */
 }
 
 /*=== Show menu ===*/
 .show {
-  right: 0;
-}
-
-
-/* Dark Theme Adjustments */
-.dark-theme .nav {
-  background-color: var(--second-color); /* Adjust as needed for dark theme */
-}
-
-.dark-theme .nav__link,
-.dark-theme .nav__logo,
-.dark-theme .nav__toggle {
-  color: var(--text-color); /* Ensure all text adapts */
+  right: 0; /* Slide-in effect for mobile menu */
 }
 
 /*===== HOME =====*/
@@ -239,50 +256,41 @@ img {
   row-gap: 5rem;
   padding: 4rem 0 5rem;
 }
-
 .home__data {
   align-self: center;
 }
-
 .home__title {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
 }
-
 .home__title-color {
-  color: var(--first-color);
+  color:  #6200EE;
 }
-
-/* Adjust the layout for the social icons */
 .home__social {
   display: flex;
-  flex-direction: row; /* Display icons in a row by default */
-  gap: 10px; /* Space between icons */
-  justify-content: center; /* Center the icons horizontally */
+  flex-direction: column;
 }
-
-@media screen and (max-width: 480px) {
-  .home__social {
-    flex-direction: column; /* Display icons in a column on mobile screens */
-    gap: 15px; /* Adjust the spacing for better appearance */
-  }
-}
-
 .home__social-icon {
-  width: 40px; /* Adjust icon size */
-  height: 40px;
+  width: max-content;
+  margin-bottom: var(--mb-2);
+  font-size: 1.5rem;
+  color: var(--second-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--second-color); /* Background color */
-  border-radius: 50%; /* Circular shape */
-  transition: transform 0.3s, background-color 0.3s;
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Make it square for a circle */
+  border-radius: 50%; /* Make it circular */
+  background-color: rgb(255, 255, 255); /* Light background for contrast */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
 
 .home__social-icon:hover {
-  background-color: var(--first-color); /* Change color on hover */
-  transform: scale(1.1); /* Slightly increase size on hover */
+  background-color: rgb(255, 255, 255); /* Change background on hover */
+  color: var(--first-color); /* Change icon color on hover */
+  box-shadow: 0 0 10px #6200EE, 0 0 20px #6200EE; /* Purple glowing effect */
 }
+
 
 .home__img {
   position: absolute;
@@ -290,11 +298,9 @@ img {
   bottom: 0;
   width: 260px;
 }
-
 .home__blob {
   fill: var(--first-color);
 }
-
 .home__blob-img {
   width: 360px;
 }
@@ -302,19 +308,14 @@ img {
 /* BUTTONS */
 .button {
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: #6200EE; /* Use the specified color */
   color: #fff;
   padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
-  text-align: center; /* Center text */
-  text-decoration: none; /* Remove underline */
-  font-size: 1rem; /* Set font size */
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  position: relative; /* Enable positioning for the effect */
+  transition: 0.3s;
+  position: relative; /* For ripple effect */
   overflow: hidden; /* Hide overflow for the ripple effect */
-  background-color: var(--first-color);
-  color: var(--text-color);
 }
 
 .button::before {
@@ -335,43 +336,82 @@ img {
 }
 
 .button:hover {
-  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.25); /* Darker shadow */
+  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15); /* Darker shadow */
   transform: translateY(-3px); /* Lift effect */
-  background-color: var(--second-color); /* Change background color on hover */
 }
 
 .button:active {
   transform: translateY(1px); /* Press effect */
 }
 
+/* ===== ABOUT ===== */
+.about__title {
+  color: #6200EE; /* Use your primary purple color */
+}
 
-/* ===== ABOUT =====*/
 .about__container {
   row-gap: 2rem;
   text-align: center;
+  padding: 3rem 1rem; /* Added padding for better spacing */
+  background-color: rgba(255, 255, 255, 0.05); /* Light background for contrast */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
 .about__subtitle {
   margin-bottom: var(--mb-2);
+  font-size: var(--h2-font-size);
+  color: var(--first-color); /* Primary color */
+  font-weight: var(--font-semi); /* Semi-bold for emphasis */
 }
+
 .about__img {
   justify-self: center;
+  transition: transform 0.3s; /* Smooth scaling */
 }
+
 .about__img img {
   width: 200px;
   border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Shadow for the image */
 }
 
-/* ===== SKILLS =====*/
+.about__img img:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Add purple border to the container 
+.about__container {
+  border: 2px solid var(--first-color); 
+}
+  */
+
+/* Add purple text for emphasis */
+.about__highlight {
+  color: #6200EE; /* Purple reference */
+  font-weight: var(--font-semi); /* Semi-bold */
+}
+
+/* ===== SKILLS ===== */
 .skills__container {
   row-gap: 2rem;
   text-align: center;
 }
+
+.skills__title {
+  color: var(--first-color); /* Bright purple for title */
+}
+
 .skills__subtitle {
   margin-bottom: var(--mb-2);
+  color: var(--first-color); /* Bright purple for subtitles */
 }
+
 .skills__text {
   margin-bottom: var(--mb-4);
+  color: var(--text-color); /* Ensure readability */
 }
+
 .skills__data {
   display: flex;
   justify-content: space-between;
@@ -381,69 +421,102 @@ img {
   padding: 0.5rem 1rem;
   margin-bottom: var(--mb-4);
   border-radius: 0.5rem;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  background-color: var(--second-color); /* Darker purple for item background */
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for hover effect */
 }
+
+.skills__data:hover {
+  box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
 .skills__icon {
   font-size: 2rem;
   margin-right: var(--mb-2);
-  color: var(--first-color);
+  color: var(--first-color); /* Bright purple for icons */
 }
+
 .skills__names {
   display: flex;
   align-items: center;
+  color: var(--text-color); /* Ensure names are visible */
 }
+
 .skills__bar {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: var(--first-color);
+  background-color: var(--first-color); /* Bright purple for progress bars */
   height: 0.25rem;
   border-radius: 0.5rem;
   z-index: var(--z-back);
 }
+
 .skills__html {
   width: 95%;
 }
+
 .skills__css {
   width: 85%;
 }
+
 .skills__js {
   width: 65%;
 }
+
 .skills__ux {
   width: 85%;
 }
+
 .skills__img {
   border-radius: 0.5rem;
 }
 
-/* ===== WORK =====*/
+
+/* ===== WORK ===== */
 .work__container {
   row-gap: 2rem;
 }
+
 .work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15); /* Subtle shadow for depth */
   border-radius: 0.5rem;
   overflow: hidden;
-}
-.work__img img {
-  transition: 1s;
-}
-.work__img img:hover {
-  transform: scale(1.1);
+  transition: transform 0.3s; /* Smooth transition for hover effect */
 }
 
-/* ===== CONTACT =====*/
+.work__img img {
+  transition: transform 1s; /* Smooth scaling on hover */
+}
+
+.work__img img:hover {
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+
+/* Optional: Add a purple border on hover */
+.work__img:hover {
+  border: 2px solid var(--first-color); /* Bright purple border on hover */
+}
+
+/* ===== CONTACT ===== */
 .contact__input {
   width: 100%;
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 1.5px solid var(--second-color);
+  border: 1.5px solid var(--first-color); /* Use first-color for border */
   outline: none;
   margin-bottom: var(--mb-4);
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
+
+.contact__input:focus {
+  border-color: var(--accent-color); /* Change border color on focus */
+  box-shadow: 0 0 5px var(--accent-color); /* Add glow effect on focus */
+}
+
 .contact__button {
   display: block;
   border: none;
@@ -451,31 +524,93 @@ img {
   font-size: var(--normal-font-size);
   cursor: pointer;
   margin-left: auto;
+  background-color: var(--first-color); /* Button background */
+  color: #fff; /* White text */
+  padding: 0.75rem 2rem; /* Padding for the button */
+  border-radius: 0.5rem; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
 }
 
-/* ===== FOOTER =====*/
+.contact__button:hover {
+  background-color: var(--accent-color); /* Change button color on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.contact__button:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+
+/* ===== FOOTER ===== */
 .footer {
   background-color: var(--second-color);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
+  position: relative; /* For any additional positioning if needed */
 }
+
 .footer__title {
   font-size: 2rem;
   margin-bottom: var(--mb-4);
+  text-transform: uppercase; /* Makes the title stand out */
+  letter-spacing: 1px; /* Adds spacing between letters */
 }
+
 .footer__social {
   margin-bottom: var(--mb-4);
+  display: flex;
+  justify-content: center; /* Center the social icons */
 }
+
 .footer__icon {
-  font-size: 1.5rem;
-  color: #fff;
+  font-size: 1.5rem; /* Same size */
+  color: #fff; /* Default color */
   margin: 0 var(--mb-2);
+  border-radius: 50%; /* Makes the icon circular */
+  width: 50px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  display: flex; /* Center icon content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
+
+/* Glowing effect on hover */
+.footer__icon:hover {
+  color: var(--first-color); /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  box-shadow: 0 0 10px var(--first-color), 0 0 20px var(--first-color); /* Glowing effect */
+}
+  color: var(--first-color); /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  box-shadow: 0 0 10px var(--first-color), 0 0 20px var(--first-color); /* Glowing effect */
+}
+
+
 .footer__copy {
   font-size: var(--smaller-font-size);
+  opacity: 0.7; /* Slightly muted text for a softer look */
+  margin-top: var(--mb-2); /* Add some space above the copyright text */
 }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .footer {
+    padding: 3rem 0; /* Increase padding for smaller screens */
+  }
+
+  .footer__title {
+    font-size: 1.5rem; /* Adjust title size for smaller screens */
+  }
+
+  .footer__copy {
+    font-size: calc(var(--smaller-font-size) * 0.9); /* Slightly smaller font size */
+  }
+}
+
+
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
