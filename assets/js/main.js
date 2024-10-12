@@ -55,22 +55,3 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
-
-// Toggle Button Functionality
-const toggleButton = document.getElementById('theme-toggle');
-
-toggleButton.addEventListener('click', () => {
-  // Add the rolling class for animation
-  toggleButton.classList.add('rolling');
-
-  // Toggle the dark theme class
-  document.body.classList.toggle('dark-theme');
-
-  // Update the button text
-  toggleButton.textContent = document.body.classList.contains('dark-theme') ? 'Manoj' : 'Manoj';
-
-  // Remove the rolling class after animation
-  setTimeout(() => {
-    toggleButton.classList.remove('rolling');
-  }, 600); // Duration should match the CSS animation time
-});

@@ -5,47 +5,48 @@
 :root {
   --header-height: 3rem;
   --font-semi: 600;
+  /*===== Colors =====*/
+  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
 
-/*===== Colors =====*/
-  --first-color: #6200EE; /* Purple */
-  --second-color: #121212; /* Charcoal */
-  --accent-color: #03DAC5; /* Vibrant Teal */
-
-  /* Text Color */
-  --text-color: hsl(0, 0%, 95%); /* Light text for dark background */
-  --muted-text-color: hsl(0, 0%, 70%); /* Muted text color for less emphasis */
-
-  /*===== Font and Typography =====*/
-  --body-font: "Montserrat", sans-serif; /* Modern sans-serif font */
-  --heading-font: "Oswald", sans-serif; /* Impactful heading font */
-  --big-font-size: 2.5rem; /* Increased size for headings */
-  --h2-font-size: 1.75rem; /* Larger subheadings */
-  --normal-font-size: 1rem;
-  --smaller-font-size: 0.875rem;
-
+  /* HSL color mode */
+  --hue-color: 224; /* Base hue for the purple theme */
+  --first-color: #754ef9; /* Vibrant purple */
+  --second-color: #754ef9; /* Darker shade */
+  --background-color: hsl(240, 30%, 10%); /* Very dark background */
+  --text-color: hsl(0, 0%, 90%); /* Light text color */
+  --link-color: #9b59b6; /* Lighter purple for links */
+  --hover-color: #6c3483; /* Darker purple for hover effects */
+  --border-color: hsl(240, 30%, 20%); /* Lighter border color */
+  --shadow-color: rgba(0, 0, 0, 0.5); /* Shadow color for elements */
+  
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Poppins", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
   /*===== Margins =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
-
-  /*===== z-index =====*/
+  /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
 }
-
-
 @media screen and (min-width: 968px) {
   :root {
-    --big-font-size: 3.5rem; /* Responsive font sizes */
+    --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
-    --normal-font-size: 1.125rem; /* Slightly larger for readability */
+    --normal-font-size: 1rem;
     --smaller-font-size: 0.875rem;
   }
 }
 
 /*===== BASE =====*/
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -57,11 +58,13 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: #121212; /* Dark background */
-  color: #E0E0E0; /* Light text color */
+  color: var(--text-color);
+  background: var(--background-color);
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   margin: 0;
 }
 
@@ -81,51 +84,15 @@ img {
   display: block;
 }
 
-/*===== VARIABLES CSS =====*/
-:root {
-  --header-height: 3rem;
-  --font-semi: 600;
-  /* Colors */
-  --primary-color: #6200EE; /* Main color */
-  --secondary-color: #3700B3; /* Darker shade */
-  --background-color: #121212; /* Dark background */
-  --text-color: #E0E0E0; /* Light text color */
-  /* Typography */
-  --body-font: "Poppins", sans-serif;
-  --big-font-size: 2rem;
-  --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
-  --smaller-font-size: .75rem;
-  /* Margins */
-  --mb-2: 1rem;
-  --mb-4: 2rem;
-  --mb-5: 2.5rem;
-  --mb-6: 3rem;
-  /* z-index */
-  --z-back: -10;
-  --z-fixed: 100;
-}
-@media screen and (min-width: 968px) {
-  :root {
-    --big-font-size: 3.5rem;
-    --h2-font-size: 2rem;
-    --normal-font-size: 1rem;
-    --smaller-font-size: .875rem;
-  }
-}
-
-
 /*===== CLASS CSS ===== */
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
-  color: var(--first-color); /* Use primary color */
+  color: var(--first-color);
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
-  font-weight: var(--font-semi); /* Add font weight for emphasis */
 }
-
 .section-title::after {
   position: absolute;
   content: "";
@@ -135,25 +102,20 @@ img {
   right: 0;
   margin: auto;
   top: 2rem;
-  background-color: var(--first-color); /* Use primary color */
+  background-color: var(--first-color);
 }
 
 .section {
   padding-top: 3rem;
   padding-bottom: 2rem;
-  background-color: var(--second-color); /* Add a background color for sections */
-  border-radius: 0.5rem; /* Slight rounding for a modern look */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/*===== LAYOUT ===== */
+/*===== LAYOUT =====*/
 .bd-grid {
   max-width: 1024px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
-  gap: var(--mb-4); /* Space between grid items */
 }
 
 .l-header {
@@ -162,15 +124,8 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--background-color); /* Use background color */
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15); /* Subtle shadow */
-  transition: background-color 0.3s; /* Smooth transition for background */
-}
-
-/* Dark Theme Adjustments */
-.dark-theme .l-header {
-  background-color: var(--second-color); /* Adjust for dark theme */
-  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1); /* Light shadow for contrast */
+  background-color:var(--background-color);
+  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
 /*===== NAV =====*/
@@ -180,11 +135,7 @@ img {
   justify-content: space-between;
   align-items: center;
   font-weight: var(--font-semi);
-  background-color: var(--background-color); /* Base background color */
-  transition: background-color 0.3s; /* Smooth transition for background color */
-  padding: 0 1rem; /* Add padding for better spacing */
 }
-
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -193,26 +144,20 @@ img {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--secondary-color); /* Use secondary color for mobile menu */
+    background-color: var(--background-color);
     transition: 0.5s;
   }
 }
-
 .nav__item {
   margin-bottom: var(--mb-4);
 }
-
 .nav__link {
   position: relative;
-  color: var(--primary-color); /* Use primary color for links */
-  transition: color 0.3s; /* Smooth color transition */
-  padding: 0.5rem; /* Add padding for clickable area */
+  color: #fff;
 }
-
 .nav__link:hover {
-  color: var(--secondary-color); /* Darker shade on hover */
+  position: relative;
 }
-
 .nav__link:hover::after {
   position: absolute;
   content: "";
@@ -220,21 +165,22 @@ img {
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--primary-color); /* Use primary color for hover effect */
+  background-color: var(--first-color);
 }
-
 .nav__logo {
-  color: var(--primary-color); /* Use primary color for logo */
-  font-size: 1.5rem; /* Increase logo font size for emphasis */
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--first-color);
+  cursor: default;
+  margin-right: auto;
 }
-
 .nav__toggle {
-  color: var(--primary-color); /* Use primary color for toggle */
+  color: var(--second-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-/* Active menu */
+/*Active menu*/
 .active-link::after {
   position: absolute;
   content: "";
@@ -242,12 +188,12 @@ img {
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--primary-color); /* Use primary color for active link */
+  background-color: var(--first-color);
 }
 
 /*=== Show menu ===*/
 .show {
-  right: 0; /* Slide-in effect for mobile menu */
+  right: 0;
 }
 
 /*===== HOME =====*/
@@ -264,7 +210,7 @@ img {
   margin-bottom: var(--mb-5);
 }
 .home__title-color {
-  color:  #6200EE;
+  color: var(--first-color);
 }
 .home__social {
   display: flex;
@@ -274,24 +220,12 @@ img {
   width: max-content;
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
-  color: var(--second-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px; /* Adjust the size as needed */
-  height: 40px; /* Make it square for a circle */
-  border-radius: 50%; /* Make it circular */
-  background-color: rgb(255, 255, 255); /* Light background for contrast */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+  color: var(--first-color);
 }
-
 .home__social-icon:hover {
-  background-color: rgb(255, 255, 255); /* Change background on hover */
-  color: var(--first-color); /* Change icon color on hover */
-  box-shadow: 0 0 10px #6200EE, 0 0 20px #6200EE; /* Purple glowing effect */
+  color: var(--first-color);
+  transform: 1.1rem;
 }
-
-
 .home__img {
   position: absolute;
   right: 0;
@@ -305,113 +239,47 @@ img {
   width: 360px;
 }
 
-/* BUTTONS */
+/*BUTTONS*/
 .button {
   display: inline-block;
-  background-color: #6200EE; /* Use the specified color */
+  background-color: var(--first-color);
   color: #fff;
   padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
   transition: 0.3s;
-  position: relative; /* For ripple effect */
-  overflow: hidden; /* Hide overflow for the ripple effect */
 }
-
-.button::before {
-  content: '';
-  position: absolute;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.3); /* Light ripple effect */
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0); /* Start scale at 0 */
-  transition: transform 0.5s ease; /* Transition for the ripple */
-}
-
-.button:hover::before {
-  transform: translate(-50%, -50%) scale(1); /* Expand ripple on hover */
-}
-
 .button:hover {
-  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15); /* Darker shadow */
-  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
 
-.button:active {
-  transform: translateY(1px); /* Press effect */
-}
-
-/* ===== ABOUT ===== */
-.about__title {
-  color: #6200EE; /* Use your primary purple color */
-}
-
+/* ===== ABOUT =====*/
 .about__container {
   row-gap: 2rem;
   text-align: center;
-  padding: 3rem 1rem; /* Added padding for better spacing */
-  background-color: rgba(255, 255, 255, 0.05); /* Light background for contrast */
-  border-radius: 0.5rem; /* Rounded corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-
 .about__subtitle {
   margin-bottom: var(--mb-2);
-  font-size: var(--h2-font-size);
-  color: var(--first-color); /* Primary color */
-  font-weight: var(--font-semi); /* Semi-bold for emphasis */
 }
-
 .about__img {
   justify-self: center;
-  transition: transform 0.3s; /* Smooth scaling */
 }
-
 .about__img img {
   width: 200px;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Shadow for the image */
 }
 
-.about__img img:hover {
-  transform: scale(1.05); /* Scale effect on hover */
-}
-
-/* Add purple border to the container 
-.about__container {
-  border: 2px solid var(--first-color); 
-}
-  */
-
-/* Add purple text for emphasis */
-.about__highlight {
-  color: #6200EE; /* Purple reference */
-  font-weight: var(--font-semi); /* Semi-bold */
-}
-
-/* ===== SKILLS ===== */
+/* ===== SKILLS =====*/
 .skills__container {
   row-gap: 2rem;
   text-align: center;
 }
-
-.skills__title {
-  color: var(--first-color); /* Bright purple for title */
-}
-
 .skills__subtitle {
   margin-bottom: var(--mb-2);
-  color: var(--first-color); /* Bright purple for subtitles */
 }
-
 .skills__text {
   margin-bottom: var(--mb-4);
-  color: var(--text-color); /* Ensure readability */
 }
-
 .skills__data {
   display: flex;
   justify-content: space-between;
@@ -421,102 +289,69 @@ img {
   padding: 0.5rem 1rem;
   margin-bottom: var(--mb-4);
   border-radius: 0.5rem;
-  background-color: var(--second-color); /* Darker purple for item background */
-  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
-  transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
-
-.skills__data:hover {
-  box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  transform: translateY(-2px); /* Slight lift effect */
-}
-
 .skills__icon {
   font-size: 2rem;
   margin-right: var(--mb-2);
-  color: var(--first-color); /* Bright purple for icons */
+  color: var(--first-color);
 }
-
 .skills__names {
   display: flex;
   align-items: center;
-  color: var(--text-color); /* Ensure names are visible */
 }
-
 .skills__bar {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: var(--first-color); /* Bright purple for progress bars */
+  background-color: var(--first-color);
   height: 0.25rem;
   border-radius: 0.5rem;
   z-index: var(--z-back);
 }
-
 .skills__html {
   width: 95%;
 }
-
 .skills__css {
   width: 85%;
 }
-
 .skills__js {
   width: 65%;
 }
-
 .skills__ux {
   width: 85%;
 }
-
 .skills__img {
   border-radius: 0.5rem;
 }
 
-
-/* ===== WORK ===== */
+/* ===== WORK =====*/
 .work__container {
   row-gap: 2rem;
 }
-
 .work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15); /* Subtle shadow for depth */
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
   border-radius: 0.5rem;
   overflow: hidden;
-  transition: transform 0.3s; /* Smooth transition for hover effect */
 }
-
 .work__img img {
-  transition: transform 1s; /* Smooth scaling on hover */
+  transition: 1s;
 }
-
 .work__img img:hover {
-  transform: scale(1.1); /* Scale up the image on hover */
+  transform: scale(1.1);
 }
 
-/* Optional: Add a purple border on hover */
-.work__img:hover {
-  border: 2px solid var(--first-color); /* Bright purple border on hover */
-}
-
-/* ===== CONTACT ===== */
+/* ===== CONTACT =====*/
 .contact__input {
   width: 100%;
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 1.5px solid var(--first-color); /* Use first-color for border */
+  border: 1.5px solid var(--second-color);
   outline: none;
   margin-bottom: var(--mb-4);
-  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
-
-.contact__input:focus {
-  border-color: var(--accent-color); /* Change border color on focus */
-  box-shadow: 0 0 5px var(--accent-color); /* Add glow effect on focus */
-}
-
 .contact__button {
   display: block;
   border: none;
@@ -524,75 +359,31 @@ img {
   font-size: var(--normal-font-size);
   cursor: pointer;
   margin-left: auto;
-  background-color: var(--first-color); /* Button background */
-  color: #fff; /* White text */
-  padding: 0.75rem 2rem; /* Padding for the button */
-  border-radius: 0.5rem; /* Rounded corners */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
 }
 
-.contact__button:hover {
-  background-color: var(--accent-color); /* Change button color on hover */
-  transform: scale(1.05); /* Slightly enlarge button on hover */
-}
-
-.contact__button:active {
-  transform: scale(0.95); /* Slightly shrink on click */
-}
-
-
-/* ===== FOOTER ===== */
+/* ===== FOOTER =====*/
 .footer {
   background-color: var(--second-color);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
-  position: relative; /* For any additional positioning if needed */
 }
-
 .footer__title {
   font-size: 2rem;
   margin-bottom: var(--mb-4);
-  text-transform: uppercase; /* Makes the title stand out */
-  letter-spacing: 1px; /* Adds spacing between letters */
 }
-
 .footer__social {
   margin-bottom: var(--mb-4);
-  display: flex;
-  justify-content: center; /* Center the social icons */
 }
-
 .footer__icon {
-  font-size: 1.5rem; /* Same size */
-  color: #fff; /* Default color */
+  font-size: 1.5rem;
+  color: #fff;
   margin: 0 var(--mb-2);
-  border-radius: 50%; /* Makes the icon circular */
-  width: 50px; /* Fixed width */
-  height: 50px; /* Fixed height */
-  display: flex; /* Center icon content */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  transition: color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
-
-.footer__icon:hover {
-  color: var(--first-color); /* Change color on hover */
-  transform: scale(1.1); /* Slightly enlarge the icon on hover */
-  box-shadow: 0 0 10px var(--first-color), 0 0 20px var(--first-color); /* Glowing effect */
-
-  color: var(--first-color); /* Change color on hover */
-  transform: scale(1.1); /* Slightly enlarge the icon on hover */
-  box-shadow: 0 0 10px var(--first-color), 0 0 20px var(--first-color); /* Glowing effect */
-}
-
 .footer__copy {
   font-size: var(--smaller-font-size);
-  opacity: 0.7; /* Slightly muted text for a softer look */
-  margin-top: var(--mb-2); /* Add some space above the copyright text */
 }
-
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
