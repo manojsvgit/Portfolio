@@ -10,9 +10,9 @@
 
   /* HSL color mode */
   --hue-color: 224; /* Base hue for the purple theme */
-  --first-color: #754ef9; /* Vibrant purple */
-  --second-color: #754ef9; /* Darker shade */
-  --background-color: hsl(240, 30%, 10%); /* Very dark background */
+  --first-color: #8A00C4; /* Vibrant purple */
+  --second-color: white; /* Darker shade */
+  --background-color:black; /* Very dark background */
   --text-color: hsl(0, 0%, 90%); /* Light text color */
   --link-color: #9b59b6; /* Lighter purple for links */
   --hover-color: #6c3483; /* Darker purple for hover effects */
