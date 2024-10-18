@@ -217,28 +217,36 @@
       </section>
 
       <!--===== CONTACT =====-->
-      <section class="contact section" id="contact">
-        <h2 class="section-title">Contact</h2>
+<section class="contact section" id="contact">
+  <h2 class="section-title">Contact</h2>
 
-        <div class="contact__container bd-grid">
-          <form action="" class="contact__form">
-            <input type="text" placeholder="Name" class="contact__input" />
-            <input type="mail" placeholder="Email" class="contact__input" />
-            <textarea
-              name=""
-              id=""
-              cols="0"
-              rows="10"
-              class="contact__input"
-            ></textarea>
-            <input
-              type="button"
-              value="Send"
-              class="contact__button button"
-            />
-          </form>
-        </div>
-      </section>
+  <div class="contact__container bd-grid">
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      class="contact__form"
+      id="contactForm"
+      onsubmit="return handleFormSubmit(event)"
+    >
+      <!-- Include Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="f304a0e6-1273-4f29-9822-46dc6817d512" />
+
+      <!-- Input fields -->
+      <input type="text" id="name" name="name" placeholder="Name" class="contact__input" required />
+      
+      <input type="email" id="email" name="email" placeholder="Email" class="contact__input" required />
+      
+      <textarea id="message" name="message" cols="0" rows="10" placeholder="Your message" class="contact__input" required></textarea>
+      
+      <!-- Submission button -->
+      <input type="submit" value="Send" class="contact__button button" />
+    </form>
+
+    <!-- Success and Error Messages -->
+    <p id="formSuccess" style="display:none; color: green;">Your message has been sent successfully!</p>
+    <p id="formError" style="display:none; color: red;">There was an error sending your message. Please try again.</p>
+  </div>
+</section>
     </main>
 
     <!--===== FOOTER =====-->

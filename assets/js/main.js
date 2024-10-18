@@ -55,3 +55,27 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+// FORM HANDLE THROUGH WEB 3 FORM 
+function handleFormSubmit(event) {
+    event.preventDefault();
+    const form = document.getElementById('contactForm');
+    const formData = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData,
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          document.getElementById('formSuccess').style.display = 'block';
+          form.reset();  // Clear the form after successful submission
+        } else {
+          document.getElementById('formError').style.display = 'block';
+        }
+      })
+      .catch(error => {
+        document.getElementById('formError').style.display = 'block';
+      });
+  }
